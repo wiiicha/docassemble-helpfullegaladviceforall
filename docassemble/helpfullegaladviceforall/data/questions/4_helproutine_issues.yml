@@ -1,0 +1,79 @@
+objects: 
+  - client: Individual
+
+---
+
+question: |
+  If you selected Legal Representation and Assistance, what help do you need?
+subquestion: "Please select NA if you selected Routine Legal Work"
+field: client.helpissue
+choices:
+  - I am involved in a lawsuit (civil or criminal)
+  - I want to initiate a lawsuit (sue someone)
+  - I am seeking Alternative Dispute Resolution solutions
+  - Other
+  - NA
+
+mandatory: True
+---
+
+question: |
+  If you selected Routine Legal Work, what help do you need? 
+subquestion: "Please select NA if you selected Legal Representation and Assistance"
+field: client.routineissue
+choices: 
+  - Will drafting
+  - Deed polls (for change of name)
+  - Debt recovery solutions
+  - Filing and submission of documents
+  - Other
+  - NA
+
+mandatory: True
+---
+
+question: |
+  Please describe your issue in detail. 
+subquestion: "Please make your description of the issue as detailed as possible, including dates, times, parties, documents, etc. <br /> 
+
+- Do not use names, but rather, use initials to protect the identities of parties involved."
+
+fields:
+  - Issue: client.description
+
+mandatory: True
+---
+
+question: |
+  Please list down all the documents in your possession that are related to your legal issue. You may copy and paste from the list below. 
+subquestion: "Common documents that are required/recommended to have include: <br />
+<br />
+    - NRIC <br />
+    - Birth Certificate <br />
+    - Death Certificate (if applicable) <br />
+    - CPF Statement for the past 12 months <br />
+    - Proof of Residence <br />
+    - Property Deed (if applicable) <br />
+    - Any relevant evidence
+    - Any other documentation you feel is important or relevant"
+    
+fields: 
+  - Documents: client.documentation
+  
+mandatory: True
+---
+
+question: |
+  How much are you able to afford for legal services?  
+subquestion: "Type 0 if you have no funds, or are in a dire financial situation. <br />
+<br />
+  - Legal fees for routine work commonly cost between SGD $1000 to $5000. <br />
+  - Legal fees for representation depends on the lawfirm.
+  - Legal Aid is usually free for eligible applicants."
+ 
+fields:
+  - Budget: client.budget
+    datatype: number
+  
+mandatory: True
+---

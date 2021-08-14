@@ -1,0 +1,147 @@
+objects:
+  - client: Individual
+---
+question: |
+  Please fill in your information and contact details below. 
+fields: 
+  - Last name: client.lastname
+  - Contact Number: client.contact
+    datatype: number
+  - Email: client.email
+    datatype: email
+    
+mandatory: True
+---
+
+question: |
+  Have you sought any form of legal aid before?
+subquestion: "Legal aid is defined as seeking legal help and assistance with  legal work or legal representation at any of these places/organizations: <br />
+<br />
+    - Ministry of Law Legal Aid Bureau <br />
+    - Law Societty Pro Bono Services Legal Clinics (includes community legal clinics) <br />
+    - Community Justice Center <br />
+    - SMU Pro Bono Centre"
+
+field: client.prior_legalaid
+buttons:
+  - Yes: Yes
+  - No: No
+mandatory: True
+---
+
+question: |
+  "If so, where? (If your answer was no, please type "NA")
+  
+subquestion: "Please copy any relevant options into the text box below, separated by a comma. E.g. SMU Pro Bono Center, Ministry of Law Legal Aid Bureau, etc. <br />
+<br />
+      - Ministry of Law Legal Aid Bureau <br />
+      - Law Society Pro Bono Services Legal Clinics (includes community legal clinics) <br />
+      - Community Justice Center at the Courts <br />
+      - SMU Pro Bono Center <br />"
+      
+fields:
+  - Where?: client.prior_legalaid_location
+      
+
+mandatory: True
+---
+
+question: |
+  What is your household's monthly income, and how many people live in the household?
+subquestion: |
+  "This question is meant to determine your eligibility for legal aid. <br />
+  
+    - For household monthly income, please sum up the monthly incomes for all individuals living in the house."
+  
+fields:
+  - Household Monthly Income: client.income
+    datatype: integer
+  - Number of Household Occupants: client.household
+    datatype: integer
+    
+mandatory: True
+
+---
+code: |
+  a = int(client.income)
+  b = int(client.household)
+  
+  answer = a/b
+---
+
+question: |
+  Are you fully vaccinated from COVID-19?
+subquestion: "You are fully vaccinated if: <br /> 
+<br />
+  a. 2 weeks have elapsed since you received your second dose <br />
+  b. You have a valid vaccination status on your TraceTogether app"
+
+field: client.vaccination
+buttons:
+  - Yes: Fully Vaccinated
+  - No: Not fully vaccinated
+  
+mandatory: True
+---
+code: |
+  if int(answer) < 950:
+    benefits = "eligible"
+  else:
+    benefits = "not eligible"
+---
+
+include: 
+  - 2_practiceareas.yml
+  - 3_legalservices.yml
+  - 4_helproutine_issues.yml
+
+---
+
+---
+question: |
+  Here is your client infosheet with recommendations!
+subquestion: |
+  We will also be submitting this document to legal aid organizations/groups for them to contact you once they have assessed your submission. 
+attachment:
+  name: Client Infosheet with Eligibility
+  filename: Client Infosheet with Eligibility
+  docx template file: template.docx
+  fields:
+    - Your Name: |
+        ${ client.lastname }
+    - Your Contact Number: |
+        ${ client.contact }
+    - Your Email: |
+        ${ client.email }
+    - Have you sought previous legal aid?: |
+        ${ client.prior_legalaid }
+    - If yes, where?: |
+        ${ client.prior_legalaid_location }
+    - Your Annual Income : |
+        ${ client.income }
+    - Number of occupants in your household: |
+        ${ client.household }
+        
+    - Per capita monthly household income: |
+        ${ answer }
+    - Practice area of Law: |
+        ${ client.practicearea }
+    - What you are seeking: |
+        ${ client.legalpurpose }
+    - What type of issue are you facing: |
+        ${ client.helpissue }
+    - What type of issue are you facing: |
+        ${ client.routineissue }
+    - A description of the issue: |
+        ${ client.description }
+    - Do you have all the documentation?: |
+        ${ client.documentation }
+    - Budget?: |
+        ${ client.budget }
+    - Eligibility: |
+        ${ benefits }
+        
+ 
+
+mandatory: True
+---

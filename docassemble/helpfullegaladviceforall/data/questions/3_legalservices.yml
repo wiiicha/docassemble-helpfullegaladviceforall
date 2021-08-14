@@ -1,0 +1,27 @@
+objects :
+  - client: Individual
+---
+
+question : |
+  What legal services do you need assistance/help with?
+
+subquestion: |
+  Some examples of legal help under each category
+  
+  I want legal consultation and help: <br />
+    - Legal representation <br />
+    - Legal assistance <br />
+    - Legal consultations <br />
+    
+  I want to get routine legal work done: <br />
+    - Will drafting <br />
+    - Buying and selling of property <br />
+    - Debt recovery <br />
+    - Deed polls <br />
+    
+field: client.legalpurpose
+buttons:
+  - Legal Consultations and Assistance: Legal Representation and Help
+  - Routine Legal Work : Routine Legal Work
+
+mandatory : True
