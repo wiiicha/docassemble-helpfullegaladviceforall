@@ -54,7 +54,7 @@ subquestion: "Common documents that are required/recommended to have include: <b
     - CPF Statement for the past 12 months <br />
     - Proof of Residence <br />
     - Property Deed (if applicable) <br />
-    - Any relevant evidence
+    - Any relevant evidence <br />
     - Any other documentation you feel is important or relevant"
     
 fields: 
@@ -73,7 +73,7 @@ subquestion: "Type 0 if you have no funds, or are in a dire financial situation.
  
 fields:
   - Budget: client.budget
-    datatype: number
+    datatype: integer
   
 mandatory: True
 ---

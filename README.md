@@ -1,4 +1,18 @@
-Made for SMU Lit Hackathon 2021
-  Team idk why
-  Members:
-    - 
+Made for SMU Lit Hackathon 2021 <br />
+Team idk why <br />
+
+<br />
+<br />
+
+How to access the project files (.yml) <br />
+ 1. Please feel free to download the repository and proceed to: <br />
+<br />
+
+docassemble-helpfullegaladviceforall/docassemble/helpfullegaladviceforall/data/questions
+ 
+Alternatively, to access the completed project, 
+ 1. Head to idkwhy.ddns.net
+ 2. Complete the online interview
+ 3. Download the generated PDF file.
+ 
+ 

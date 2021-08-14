@@ -2,11 +2,11 @@ objects:
   - client: Individual
 ---
 question: |
-  Please fill in your information and contact details below. 
+  Please fill in your basic information and contact details below. 
 fields: 
   - Last name: client.lastname
   - Contact Number: client.contact
-    datatype: number
+    datatype: integer
   - Email: client.email
     datatype: email
     
@@ -18,9 +18,9 @@ question: |
 subquestion: "Legal aid is defined as seeking legal help and assistance with  legal work or legal representation at any of these places/organizations: <br />
 <br />
     - Ministry of Law Legal Aid Bureau <br />
-    - Law Societty Pro Bono Services Legal Clinics (includes community legal clinics) <br />
+    - Law Societty Pro Bono Services (includes community legal clinics) <br />
     - Community Justice Center <br />
-    - SMU Pro Bono Centre"
+    - SMU Pro Bono Centre Legal Clinic"
 
 field: client.prior_legalaid
 buttons:
@@ -35,9 +35,9 @@ question: |
 subquestion: "Please copy any relevant options into the text box below, separated by a comma. E.g. SMU Pro Bono Center, Ministry of Law Legal Aid Bureau, etc. <br />
 <br />
       - Ministry of Law Legal Aid Bureau <br />
-      - Law Society Pro Bono Services Legal Clinics (includes community legal clinics) <br />
+      - Law Society Pro Bono Services (includes community legal clinics) <br />
       - Community Justice Center at the Courts <br />
-      - SMU Pro Bono Center <br />"
+      - SMU Pro Bono Center Legal Clinic <br />"
       
 fields:
   - Where?: client.prior_legalaid_location
