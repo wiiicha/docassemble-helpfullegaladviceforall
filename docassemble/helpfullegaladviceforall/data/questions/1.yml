@@ -30,7 +30,7 @@ mandatory: True
 ---
 
 question: |
-  "If so, where? (If your answer was no, please type "NA")
+  If so, where? (If your answer was no, please type "NA")
   
 subquestion: "Please copy any relevant options into the text box below, separated by a comma. E.g. SMU Pro Bono Center, Ministry of Law Legal Aid Bureau, etc. <br />
 <br />
@@ -49,9 +49,9 @@ mandatory: True
 question: |
   What is your household's monthly income, and how many people live in the household?
 subquestion: |
-  "This question is meant to determine your eligibility for legal aid. <br />
+  This question is meant to determine your eligibility for legal aid. <br />
   
-    - For household monthly income, please sum up the monthly incomes for all individuals living in the house."
+    - For household monthly income, please sum up the monthly incomes for all individuals living in the house.
   
 fields:
   - Household Monthly Income: client.income
@@ -82,18 +82,54 @@ buttons:
   - No: Not fully vaccinated
   
 mandatory: True
+
+
+
+
+
+
+
+
+
+
 ---
+
+
 code: |
   if int(answer) < 950:
     benefits = "eligible"
   else:
     benefits = "not eligible"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 ---
 
 include: 
   - 2_practiceareas.yml
   - 3_legalservices.yml
   - 4_helproutine_issues.yml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 

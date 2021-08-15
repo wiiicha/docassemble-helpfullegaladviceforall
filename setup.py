@@ -43,9 +43,9 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.helpfullegaladviceforall',
-      version='1.0.1',
+      version='1.0.2',
       description=('A docassemble extension, based on providing helpful legal access for all people'),
-      long_description='Made for SMU Lit Hackathon 2021 <br />\r\nTeam idk why <br />\r\n\r\n<br />\r\n\r\nHow to access the project files (.yml) <br />\r\n 1. Please feel free to download the repository and proceed to: <br />\r\n\r\ndocassemble-helpfullegaladviceforall/docassemble/helpfullegaladviceforall/data/questions \r\n\r\n<br />\r\n \r\nAlternatively, to access the completed project, \r\n 1. Head to idkwhy.ddns.net\r\n 2. Complete the online interview\r\n 3. Download the generated PDF file.\r\n \r\n ',
+      long_description='Made for SMU Lit Hackathon 2021 <br />\r\nTeam idk why <br />\r\n\r\n<br />\r\n\r\nHow to access the project files (.yml) <br />\r\n 1. Please feel free to download the repository and proceed to: <br />\r\ndocassemble-helpfullegaladviceforall/docassemble/helpfullegaladviceforall/data/questions \r\n\r\n<br />\r\n \r\nAlternatively, to access the completed project, \r\n 1. Head to idkwhy.ddns.net\r\n 2. Complete the online interview\r\n 3. Download the generated PDF file.\r\n \r\n ',
       long_description_content_type='text/markdown',
       author='Prakhunwicha Sararaksh',
       author_email='prakhunwich.2020@law.smu.edu.sg',

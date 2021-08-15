@@ -5,7 +5,6 @@ Team idk why <br />
 
 How to access the project files (.yml) <br />
  1. Please feel free to download the repository and proceed to: <br />
-
 docassemble-helpfullegaladviceforall/docassemble/helpfullegaladviceforall/data/questions 
 
 <br />
