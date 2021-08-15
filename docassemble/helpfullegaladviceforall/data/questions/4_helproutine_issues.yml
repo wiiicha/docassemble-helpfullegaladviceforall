@@ -8,10 +8,12 @@ question: |
 subquestion: "Please select NA if you selected Routine Legal Work"
 field: client.helpissue
 choices:
-  - I am involved in a lawsuit (civil or criminal)
+  - I am involved in a lawsuit
   - I want to initiate a lawsuit (sue someone)
   - I am seeking Alternative Dispute Resolution solutions
-  - Other
+  - I want to initiate divorce proceedings
+  - I want to buy/sell property
+  - Others (please elaborate in the next question)
   - NA
 
 mandatory: True
@@ -26,7 +28,7 @@ choices:
   - Deed polls (for change of name)
   - Debt recovery solutions
   - Filing and submission of documents
-  - Other
+  - Others (please elaborate in the next question)
   - NA
 
 mandatory: True
@@ -35,8 +37,9 @@ mandatory: True
 question: |
   Please describe your issue in detail. 
 subquestion: "Please make your description of the issue as detailed as possible, including dates, times, parties, documents, etc. <br /> 
-
-- Do not use names, but rather, use initials to protect the identities of parties involved."
+<br />
+- Do not use names, but rather, use initials to protect the identities of parties involved (for PDPA purposes) <br />
+- If there is evidential material involved (eg, videos, screenshots), please list it out here as well as how it is relevant to the issue at hand."
 
 fields:
   - Issue: client.description
@@ -54,7 +57,7 @@ subquestion: "Common documents that are required/recommended to have include: <b
     - CPF Statement for the past 12 months <br />
     - Proof of Residence <br />
     - Property Deed (if applicable) <br />
-    - Any relevant evidence <br />
+    - Any relevant evidence (please list out, eg videos, screenshots, etc.) <br />
     - Any other documentation you feel is important or relevant"
     
 fields: 
@@ -68,7 +71,7 @@ question: |
 subquestion: "Type 0 if you have no funds, or are in a dire financial situation. <br />
 <br />
   - Legal fees for routine work commonly cost between SGD $1000 to $5000. <br />
-  - Legal fees for representation depends on the lawfirm.
+  - Legal fees for representation depends on the lawfirm. <br />
   - Legal Aid is usually free for eligible applicants."
  
 fields:

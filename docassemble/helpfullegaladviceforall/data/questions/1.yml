@@ -20,7 +20,8 @@ subquestion: "Legal aid is defined as seeking legal help and assistance with  le
     - Ministry of Law Legal Aid Bureau <br />
     - Law Societty Pro Bono Services (includes community legal clinics) <br />
     - Community Justice Center <br />
-    - SMU Pro Bono Centre Legal Clinic"
+    - SMU Pro Bono Centre Legal Clinic <br />
+    - Other legal clinics"
 
 field: client.prior_legalaid
 buttons:
@@ -30,26 +31,26 @@ mandatory: True
 ---
 
 question: |
-  If so, where? (If your answer was no, please type "NA")
+  If you have selected YES, where? (If your answer was NO, please type "NA" into the answer field)
   
 subquestion: "Please copy any relevant options into the text box below, separated by a comma. E.g. SMU Pro Bono Center, Ministry of Law Legal Aid Bureau, etc. <br />
 <br />
       - Ministry of Law Legal Aid Bureau <br />
       - Law Society Pro Bono Services (includes community legal clinics) <br />
       - Community Justice Center at the Courts <br />
-      - SMU Pro Bono Center Legal Clinic <br />"
+      - SMU Pro Bono Center Legal Clinic <br />
+      - Other legal clinics"
       
 fields:
   - Where?: client.prior_legalaid_location
       
-
 mandatory: True
 ---
 
 question: |
-  What is your household's monthly income, and how many people live in the household?
+  What is your household's monthly income, and how many people live in your household?
 subquestion: |
-  This question is meant to determine your eligibility for legal aid. <br />
+  This question is meant to determine your eligibility for legal aid, of which there is a monthly per-capita income cap. This will be calculated and displayed on your final PDF. <br />
   
     - For household monthly income, please sum up the monthly incomes for all individuals living in the house.
   
@@ -78,7 +79,7 @@ subquestion: "You are fully vaccinated if: <br />
 
 field: client.vaccination
 buttons:
-  - Yes: Fully Vaccinated
+  - Yes: Fully vaccinated
   - No: Not fully vaccinated
   
 mandatory: True
@@ -139,8 +140,8 @@ question: |
 subquestion: |
   We will also be submitting this document to legal aid organizations/groups for them to contact you once they have assessed your submission. 
 attachment:
-  name: Client Infosheet with Eligibility
-  filename: Client Infosheet with Eligibility
+  name: Client Infosheet
+  filename: Client Infosheet
   docx template file: template.docx
   fields:
     - Your Name: |
