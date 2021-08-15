@@ -11,7 +11,8 @@ docassemble-helpfullegaladviceforall/docassemble/helpfullegaladviceforall/data/q
  
 Alternatively, to access the completed project, 
  1. Head to idkwhy.ddns.net
- 2. Complete the online interview
- 3. Download the generated PDF file.
+ 2. If you cannot access the site, please try turning off any vpn/firewalls and use mobile data. 
+ 3. Complete the online interview. 
+ 4. Download the generated PDF file.
  
  
